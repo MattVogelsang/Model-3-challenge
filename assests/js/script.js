@@ -3,7 +3,37 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 
 // Collect employee data
 const collectEmployees = function() {
+ 
+  const employees=[];
+  //   (
+  //     firstName:"Matt",
+  //     lastName:"Vogelsang",
+  //     salary:"10000"
+    
+  //   ),
+  // {
+  //   firstName:"Jamie",
+  //   lastName:"Lujan",
+  //   salary:"20000"
+
+  // }
+  
   // TODO: Get user input to create and return an array of employee objects
+  const firstName=prompt("What is the first name of the employee?");
+  const lastName=prompt("What is the last name of the employee?");
+  const salary=prompt("What is the salary the employee?");
+  
+  const newEmployees={
+    firstName,
+    lastName,
+    salary
+  }
+
+  employees.push(newEmployees);
+
+  const isContinue=confirm("Do you want to continue");
+
+  return employees;
 }
 
 // Display the average salary
